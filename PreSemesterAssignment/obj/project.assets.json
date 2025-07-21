@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matthew\\source\\repos\\mkbarnes1023\\PreSemesterAssignment\\PreSemesterAssignment.csproj",
+      "projectUniqueName": "C:\\Users\\Matthew\\source\\repos\\mkbarnes1023\\PreSemesterAssignment\\PreSemesterAssignment\\PreSemesterAssignment.csproj",
       "projectName": "PreSemesterAssignment",
-      "projectPath": "C:\\Users\\Matthew\\source\\repos\\mkbarnes1023\\PreSemesterAssignment\\PreSemesterAssignment.csproj",
+      "projectPath": "C:\\Users\\Matthew\\source\\repos\\mkbarnes1023\\PreSemesterAssignment\\PreSemesterAssignment\\PreSemesterAssignment.csproj",
       "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matthew\\source\\repos\\mkbarnes1023\\PreSemesterAssignment\\obj\\",
+      "outputPath": "C:\\Users\\Matthew\\source\\repos\\mkbarnes1023\\PreSemesterAssignment\\PreSemesterAssignment\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config",
