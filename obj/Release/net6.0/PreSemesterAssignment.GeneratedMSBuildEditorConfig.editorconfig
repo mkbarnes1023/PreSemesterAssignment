@@ -9,11 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PreSemesterAssignment
 build_property.RootNamespace = PreSemesterAssignment
-build_property.ProjectDir = C:\Users\Matthew\source\repos\mkbarnes1023\PreSemesterAssignment\
+build_property.ProjectDir = C:\Users\Matthew\Source\Repos\mkbarnes1023\PreSemesterAssignment\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Matthew\source\repos\mkbarnes1023\PreSemesterAssignment
+build_property.MSBuildProjectDirectory = C:\Users\Matthew\Source\Repos\mkbarnes1023\PreSemesterAssignment
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/Matthew/source/repos/mkbarnes1023/PreSemesterAssignment/Views/Home/Index.cshtml]
