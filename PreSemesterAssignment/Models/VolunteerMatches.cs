@@ -9,6 +9,7 @@ namespace PreSemesterAssignment.Models
     */
     public class VolunteerMatchesModel
     {
+        // Both are Foreign Keys
         public int VolunteerID { get; set; }
         public int OppurtunityID { get; set; }
     }

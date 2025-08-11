@@ -6,6 +6,7 @@ namespace PreSemesterAssignment.Models
     public class VolunteerModel
     {
         // Datatypes with a question mark are nullable fields
+        // Primary Key
         public int VolunteerID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

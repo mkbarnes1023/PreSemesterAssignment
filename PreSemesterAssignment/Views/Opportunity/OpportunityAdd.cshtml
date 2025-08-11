@@ -1,0 +1,26 @@
+﻿@page
+@{
+}
+<!--
+    This page serves as a fillable form to register a new Opportunity to the list.
+    Can also serve as the Edit Opportunity page if fed an existing Opportunity's information.
+-->
+<div>
+    <h1>Opportunity Registration Form</h1>
+    <a asp-controller="Home" asp-action="Admin">Back to Admin Home</a>
+
+    <!--The form for adding a new Opportunity-->
+    <form>
+        <label>Center</label>
+        <input type="text" id="Center"/>
+        <br/>
+
+        <label>Description</label>
+        <input type="text" id="LastName"/>
+        <br/>
+
+        <!--The DateAdded and OpportunityID fields can be automatically filled-->
+
+        <input type="submit" value="Submit"/>
+    </form>
+</div>

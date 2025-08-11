@@ -1,0 +1,27 @@
+﻿@page
+@{
+}
+<!--
+	 This is the landing page for signed in Administrators. This page provides links to the different functions
+	 provided by the application: Pages for Volunteer and Opportunity lists, and forms to add new Volunteers and
+	 Opportunities
+-->
+<div>
+	<h1>Volunteer Administration Portal</h1>
+	Welcome to the Volunteer Management System! Please select an option:
+	<ul>
+		<li>
+			<a asp-controller="Volunteer" asp-action="VolunteerList">View Volunteer List</a>
+		</li>
+		<li>
+			<a asp-controller="Volunteer" asp-action="VolunteerAdd">Register New Volunteer</a>
+		</li>
+		<li>
+			<a asp-controller="Opportunity" asp-action="OpportunityList">View Opportunity List</a>
+		</li>
+		<li>
+			<a asp-controller="Opportunity" asp-action="OpportunityAdd">Register New Opportunity</a>
+		</li>
+</ul>
+   
+</div>
