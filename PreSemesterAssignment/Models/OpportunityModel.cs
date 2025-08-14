@@ -5,7 +5,7 @@ namespace PreSemesterAssignment.Models
     /**
     * This Model holds information about the volunteer oppurtunities available
     */
-    public class OppurtunityModel
+    public class OpportunityModel
     {
         // Primary Key
         public int OppurtunityID { get; set; }
