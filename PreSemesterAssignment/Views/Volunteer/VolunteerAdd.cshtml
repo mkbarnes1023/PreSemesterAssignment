@@ -1,4 +1,5 @@
-﻿@page
+﻿@using PreSemesterAssignment.Models.Repositories;
+@model PreSemesterAssignment.Models.Volunteer
 @{
 }
 <!--
@@ -10,95 +11,89 @@
     <a asp-controller="Home" asp-action="Admin">Back to Admin Home</a>
 
     <!--The form for adding a new Volunteer.-->
-    <form>
+    <form asp-controller="Volunteer" asp-action="SubmitNewVolunteer">
         <label>First Name</label>
-        <input type="text" id="FirstName" />
+        <input asp-for="FirstName" type="text" id="FirstName" />
         <br />
 
         <label>Last Name</label>
-        <input type="text" id="LastName" />
+        <input asp-for="LastName" type="text" id="LastName" />
         <br />
 
         <label>Username</label>
-        <input type="text" id="Username" />
+        <input asp-for="Username" type=" text" id="Username" />
         <br />
 
         <label>Password</label>
-        <input type="password" id="Password" />
+        <input asp-for="Password" type="password" id="Password" />
         <br />
 
-        <!--
-            TODO:
-            There are a few fields that may have multiple entries (Like Available times or PreferedCenters)
-            where we need to be able to dynamically add more fields to the form if the user
-            needs to input another field for an option (ie. one user may only have 1 available
-            time, but another could have 6). We could convert those fields to a single string
-            and just let the user fill it out as they see fit, but that could be less than ideal
+        <label>PreferedCenters</label>
+        <input asp-for="PreferedCenters" type="text" id="PreferedCenters" />
+        <br />
 
-            In particular, these fields are:
-            PreferedCenters
-            SkillsAndInterests
-            AvailableTimes
-            CurrentLicenses
+        <label>SkillsAndInterests</label>
+        <input asp-for="SkillsAndInterests" type="text" id="SkillsAndInterests" />
+        <br />
 
-            Most could probebly be main a single string, but AvailableTimes could be unideal due to time formatting
-        -->
+        <label>AvailableTimes</label>
+        <input asp-for="AvailableTimes" type="text" id="AvailableTimes" />
+        <br />
 
-        <label>Last Name</label>
-        <input type="text" id="LastName" />
+        <label>CurrentLicenses</label>
+        <input asp-for="CurrentLicenses" type="text" id="CurrentLicenses" />
         <br />
 
         <label>Home Address</label>
-        <input type="text" id="HomeAddress" />
+        <input asp-for="HomeAddress" type="text" id="HomeAddress" />
         <br />
 
         <label>Contact Number</label>
-        <input type="text" id="ContactNumber" />
+        <input asp-for="ContactNumbers" type="text" id="ContactNumber" />
         <br />
 
         <label>Email Address</label>
-        <input type="text" id="EmailAddress" />
+        <input asp-for="EmailAddress" type="text" id="EmailAddress" />
         <br />
 
         <label>Education Level</label>
-        <input type="text" id="LastName" />
+        <input asp-for="EducationLevel" type="text" id="EducationLevel" />
         <br />
 
         <label>Emergency Contact Name</label>
-        <input type="text" id="ECName" />
+        <input asp-for="EmergencyContactName" type="text" id="ECName" />
         <br />
 
         <label>Emergency Contact Number</label>
-        <input type="text" id="ECNumber" />
+        <input asp-for="EmergencyContactContactNumber" type="text" id="ECNumber" />
         <br />
 
         <label>Emergency Contact Home Address</label>
-        <input type="text" id="ECHomeAddress" />
+        <input asp-for="EmergencyContactHomeAddress" type="text" id="ECHomeAddress" />
         <br />
 
         <label>Emergency Contact Email Address</label>
-        <input type="text" id="ECEmailAddress" />
+        <input asp-for="EmergencyContactHomeAddress" type="text" id="ECEmailAddress" />
         <br />
 
         <label>Drivers Lincense On File?</label>
-        <input type="checkbox" id="LicenseOnFile" />
+        <input asp-for="DriversLicenseOnFile" type="checkbox" id="LicenseOnFile" />
         <br />
 
         <label>Social Security Card On File?</label>
-        <input type="checkbox" id="SSNCardOnFile" />
+        <input asp-for="SSNCardOnFile" type="checkbox" id="SSNCardOnFile" />
         <br />
 
-        <label>Approval Status:</label><br />
+        <label>Approval Status:</label><br/>
+            <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Pending" value="Pending" />
+            <label for="Pending">Pending</label><br />
 
-        <input type="radio" name="ApprovalStatus" id="Pending" value="Pending" />
-        <label for="Pending">Pending</label><br />
+        <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Approved" value="Approved" />
+            <label for="Pending">Approved</label><br />
 
-        <input type="radio" name="ApprovalStatus" id="Approved" value="Approved" />
-        <label for="Pending">Approved</label><br />
-
-        <input type="radio" name="ApprovalStatus" id="Rejected" value="Rejected" />
-        <label for="Pending">Rejected</label><br />
-        <br />
+        <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Rejected" value="Rejected" />
+            <label for="Pending">Rejected</label><br />
+            <br />
 
         <!--
             The VolunteerID field can be automatically filled when the form submits.
