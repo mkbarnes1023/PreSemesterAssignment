@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PreSemesterAssignment.Models;
 
 namespace PreSemesterAssignment.Data
 {
@@ -9,5 +10,11 @@ namespace PreSemesterAssignment.Data
             : base(options)
         {
         }
+
+        public DbSet<VolunteerModel> Volunteers { get; set; }
+        public DbSet<OpportunityModel> Opportunities { get; set; }
+        // If you have an Administrator model, add it here:
+        public DbSet<AdministratorModel> Administrators { get; set; }
+        public DbSet<VolunteerMatchesModel> VolunteerMatches { get; set; }
     }
 }

@@ -10,6 +10,7 @@ namespace PreSemesterAssignment.Models
 	{
 		// Storage of Username/Password is a temporary solution, Identity framework should be used
 		// Primary Key
+		[Key]
 		public string Username { get; set; }
 		public string Password { get; set; }
 	}
