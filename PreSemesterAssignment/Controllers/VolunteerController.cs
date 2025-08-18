@@ -25,7 +25,7 @@ namespace PreSemesterAssignment.Controllers
         // Returns the page for viewing the list of volunteers
         public IActionResult VolunteerList()
         {
-            return View(VolunteerRepo);
+            return View(VolunteerRepo.Volunteers);
         }
 
         // Returns the page for adding a volunteer

@@ -15,6 +15,7 @@
             <th>Center</th>
             <th>Description</th>
             <th>Date Added</th>
+            <th>Delete</th>
         </tr>
             @foreach(Opportunity o in Model)
             {
@@ -23,6 +24,9 @@
                     <td>@o.Center</td>
                     <td>@o.Description</td>
                     <td>@o.DateAdded</td>
+                    <td>
+                        <a asp-controller="Opportunity" asp-action="DeleteOpportunity" asp-route-OpportunityID="@o.OppurtunityID">Delete</a>
+                    </td>
                </tr>
             }
     </table>
