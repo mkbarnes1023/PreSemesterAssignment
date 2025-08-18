@@ -1,9 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using PreSemesterAssignment.Models;
+using PreSemesterAssignment.Models;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using PreSemesterAssignment.Models.RepositoryInterfaces;
+using PreSemesterAssignment.Models.Repositories;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,17 +15,33 @@ namespace PreSemesterAssignment.Controllers
 {
     public class VolunteerController : Controller
     {
-        // Returns the page for viewing the list of volunteers, with the Volunteer Model bound
-        public IActionResult VolunteerList()
+        private IVolunteerRepository VolunteerRepo;
+
+        public VolunteerController(IVolunteerRepository Repository)
         {
-            return View();
+            VolunteerRepo = Repository;
         }
 
-        // Returns the page for adding a volunteer, with the Volunteer Model bound
+        // Returns the page for viewing the list of volunteers
+        public IActionResult VolunteerList()
+        {
+            return View(VolunteerRepo);
+        }
+
+        // Returns the page for adding a volunteer
         public IActionResult VolunteerAdd()
         {
-            return View();
+            return View(VolunteerRepo);
         }
-    }
+
+		public IActionResult SubmitNewVolunteer(Volunteer newVolunteer)
+		{
+			// Add the Volunteer to the VolunteerRepo
+            VolunteerRepo.AddVolunteer(newVolunteer);
+            VolunteerRepo.Save();
+			// Redirect to the VolunteerList (With the VolunteerRepo)
+			return View("VolunteerList", VolunteerRepo);
+		}
+	}
 }
 

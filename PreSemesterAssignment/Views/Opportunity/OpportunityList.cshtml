@@ -1,4 +1,6 @@
 ﻿@page
+@using PreSemesterAssignment.Models.Repositories;
+@model IEnumerable<Opportunity>
 @{
 }
 <!--
@@ -8,4 +10,21 @@
 <div>
     <h1>Opportunity List</h1>
     <a asp-controller="Home" asp-action="Admin">Back to Admin Home</a>
+    <table>
+        <tr>
+			<th>ID</th>
+            <th>Center</th>
+            <th>Description</th>
+            <th>Date Added</th>
+        </tr>
+            @foreach(Opportunity o in Model)
+            {
+               <tr>
+				    <td>@o.OppurtunityID</td>
+                    <td>@o.Center</td>
+                    <td>@o.Description</td>
+                    <td>@o.DateAdded</td>
+               </tr>
+            }
+    </table>
 </div>

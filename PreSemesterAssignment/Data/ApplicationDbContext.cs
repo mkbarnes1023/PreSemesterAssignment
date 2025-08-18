@@ -11,8 +11,8 @@ namespace PreSemesterAssignment.Data
         {
         }
 
-        public DbSet<VolunteerModel> Volunteers { get; set; }
-        public DbSet<OpportunityModel> Opportunities { get; set; }
+        public DbSet<Volunteer> Volunteers { get; set; }
+        public DbSet<Opportunity> Opportunities { get; set; }
         // If you have an Administrator model, add it here:
         public DbSet<AdministratorModel> Administrators { get; set; }
         public DbSet<VolunteerMatchesModel> VolunteerMatches { get; set; }

@@ -1,6 +1,8 @@
 using PreSemesterAssignment.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using PreSemesterAssignment.Models.RepositoryInterfaces;
+using PreSemesterAssignment.Models.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +24,10 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Account/Login";
 });
+
+// Setup DB Repositories
+builder.Services.AddScoped<IVolunteerRepository, VolunteerRepository>();
+builder.Services.AddScoped<IOpportunityRepository, OpportunityRepository>();
 
 var app = builder.Build();
 

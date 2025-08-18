@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 namespace PreSemesterAssignment.Models
 {
     // This Model holds information about the volunteers registered to the volunteer system
-    public class VolunteerModel
+    public class Volunteer
     {
         // Datatypes with a question mark are nullable fields
         // Primary Key

@@ -1,5 +1,5 @@
 ﻿@page
-@model VolunteerModel 
+@model IEnumerable<Volunteer>
 @{
 }
 <!--
@@ -9,4 +9,8 @@
 <div>
     <h1>Volunteer List</h1>
     <a asp-controller="Home" asp-action="Admin">Back to Admin Home</a>
+    @foreach(Volunteer v in Model)
+    {
+        
+    }
 </div>
