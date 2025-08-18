@@ -58,3 +58,10 @@ Desktop.ini
 *.swp
 *.bak
 *.tmp
+
+CopilotIndices/
+FileContentIndex/
+v17/
+ProjectEvaluation/
+slnx.sqlite
+VSWorkspaceState.json
