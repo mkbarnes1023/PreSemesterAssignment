@@ -58,6 +58,22 @@ namespace PreSemesterAssignment.Controllers
 
             return View("OpportunityList", OpportunityRepo.Opportunities);
         }
-    }
+
+        public IActionResult EditOpportunity(int OpportunityID)
+        {
+            Opportunity o = OpportunityRepo.GetOpportunityByID(OpportunityID);
+
+            return View("OpportunityEdit", o);
+		}
+
+		public IActionResult SubmitEditedOpportunity(Opportunity updatedOpportunity)
+		{
+	        OpportunityRepo.UpdateOpportunity(updatedOpportunity);
+            OpportunityRepo.Save();
+
+			return View("OpportunityList", OpportunityRepo.Opportunities);
+		}
+
+	}
 }
 

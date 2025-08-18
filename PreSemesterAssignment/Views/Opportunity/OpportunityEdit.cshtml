@@ -1,0 +1,27 @@
+﻿@using PreSemesterAssignment.Models.Repositories;
+@model PreSemesterAssignment.Models.Opportunity
+@{
+}
+<!--
+    This page serves as a fillable form to edit an existing Opportunity.
+-->
+<div>
+    <h1>Opportunity Registration Form</h1>
+    <a asp-controller="Opportunity" asp-action="OpportunityList">Back to Opportunity List</a>
+
+    <!--The form for editing an Opportunity-->
+    <form asp-controller="Opportunity" asp-action="SubmitEditedOpportunity">
+        <label>Center</label>
+        <input asp-for="Center" type="text" id="Center" value="@Model.Center"/>
+        <br/>
+
+        <label>Description</label>
+        <input asp-for="Description" type="text" id="Description" value="@Model.Description" />
+        <br/>
+
+        <input asp-for="OppurtunityID" type="hidden" id="OppurtunityID" value="@Model.OppurtunityID" />
+        <input asp-for="DateAdded" type="hidden" id="DateAdded" value="@Model.DateAdded" />
+
+        <input type="submit" value="Submit"/>
+    </form>
+</div>

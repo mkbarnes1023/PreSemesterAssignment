@@ -1,0 +1,136 @@
+﻿@using PreSemesterAssignment.Models.Repositories;
+@model PreSemesterAssignment.Models.Volunteer
+@{
+}
+<!--
+    This page serves as a fillable form edit a Volunteer.
+-->
+<div>
+    <h1>Volunteer Registration Form</h1>
+    <a asp-controller="Volunteer" asp-action="VolunteerList">Back to Volunteer List</a>
+
+    <!--The form for adding a new Volunteer.-->
+    <form asp-controller="Volunteer" asp-action="SubmitEditedVolunteer">
+        <label>First Name</label>
+        <input asp-for="FirstName" type="text" id="FirstName" value="@Model.FirstName"/>
+        <br />
+
+        <label>Last Name</label>
+        <input asp-for="LastName" type="text" id="LastName" value="@Model.LastName" />
+        <br />
+
+        <label>Username</label>
+        <input asp-for="Username" type=" text" id="Username" value="@Model.Username" />
+        <br />
+
+        <label>Password</label>
+        <input asp-for="Password" type="password" id="Password" value="@Model.Password" />
+        <br />
+
+        <label>PreferedCenters</label>
+        <input asp-for="PreferedCenters" type="text" id="PreferedCenters" value="@Model.PreferedCenters" />
+        <br />
+
+        <label>SkillsAndInterests</label>
+        <input asp-for="SkillsAndInterests" type="text" id="SkillsAndInterests" value="@Model.SkillsAndInterests" />
+        <br />
+
+        <label>AvailableTimes</label>
+        <input asp-for="AvailableTimes" type="text" id="AvailableTimes" value="@Model.AvailableTimes" />
+        <br />
+
+        <label>CurrentLicenses</label>
+        <input asp-for="CurrentLicenses" type="text" id="CurrentLicenses" value="@Model.CurrentLicenses" />
+        <br />
+
+        <label>Home Address</label>
+        <input asp-for="HomeAddress" type="text" id="HomeAddress" value="@Model.HomeAddress" />
+        <br />
+
+        <label>Contact Number</label>
+        <input asp-for="ContactNumbers" type="text" id="ContactNumber" value="@Model.ContactNumbers" />
+        <br />
+
+        <label>Email Address</label>
+        <input asp-for="EmailAddress" type="text" id="EmailAddress" value="@Model.EmailAddress" />
+        <br />
+
+        <label>Education Level</label>
+        <input asp-for="EducationLevel" type="text" id="EducationLevel" value="@Model.EducationLevel" />
+        <br />
+
+        <label>Emergency Contact Name</label>
+        <input asp-for="EmergencyContactName" type="text" id="ECName" value="@Model.EmergencyContactName" />
+        <br />
+
+        <label>Emergency Contact Number</label>
+        <input asp-for="EmergencyContactContactNumber" type="text" id="ECNumber" value="@Model.EmergencyContactContactNumber" />
+        <br />
+
+        <label>Emergency Contact Home Address</label>
+        <input asp-for="EmergencyContactHomeAddress" type="text" id="ECHomeAddress" value="@Model.EmergencyContactHomeAddress" />
+        <br />
+
+        <label>Emergency Contact Email Address</label>
+        <input asp-for="EmergencyContactHomeAddress" type="text" id="ECEmailAddress" value="@Model.EmergencyContactHomeAddress" />
+        <br />
+
+        <label>Drivers Lincense On File?</label>
+        @if (Model.DriversLicenseOnFile)
+        {
+            <input asp-for="DriversLicenseOnFile" type="checkbox" id="LicenseOnFile" value="@Model.DriversLicenseOnFile" checked/>
+        }
+        else
+        {
+            <input asp-for="DriversLicenseOnFile" type="checkbox" id="LicenseOnFile" value="@Model.DriversLicenseOnFile" />
+        }
+        <br />
+
+        <label>Social Security Card On File?</label>
+        @if (Model.SSNCardOnFile)
+        {
+            <input asp-for="SSNCardOnFile" type="checkbox" id="SSNCardOnFile" value="@Model.SSNCardOnFile" checked />
+        }
+        else
+        {
+            <input asp-for="SSNCardOnFile" type="checkbox" id="SSNCardOnFile" value="@Model.SSNCardOnFile" />
+        }
+        <br />
+
+        <label>Approval Status:</label><br/>
+            @if(Model.ApprovalStatus == "Pending")
+            {
+                <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Pending" value="Pending" checked/>
+            } 
+            else
+            {
+                <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Pending" value="Pending" />
+            }
+            <label for="Pending">Pending</label><br />
+
+            @if (Model.ApprovalStatus == "Approved")
+            {
+                <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Approved" value="Approved" checked />
+            }
+            else
+            {
+                <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Approved" value="Approved" />
+            }
+            <label for="Pending">Approved</label><br />
+
+            @if (Model.ApprovalStatus == "Rejected")
+            {
+                <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Rejected" value="Rejected" checked />
+            }
+            else
+            {
+                <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Rejected" value="Rejected" />
+            }
+            <label for="Pending">Rejected</label><br />
+            <br />
+
+		<input asp-for="VolunteerID" type="hidden" id="VolunteerID" value="@Model.VolunteerID" />
+
+        <input type="submit" value="Submit" />
+    </form>
+</div>
