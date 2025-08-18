@@ -17,73 +17,73 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PreSemesterAssignment
 build_property.RootNamespace = PreSemesterAssignment
-build_property.ProjectDir = C:\Users\emily\source\repos\mkbarnes1023\PreSemesterAssignment\PreSemesterAssignment\
+build_property.ProjectDir = C:\source\repos\PreSemesterAssignment\PreSemesterAssignment\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\emily\source\repos\mkbarnes1023\PreSemesterAssignment\PreSemesterAssignment
+build_property.MSBuildProjectDirectory = C:\source\repos\PreSemesterAssignment\PreSemesterAssignment
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Account/_AccountLogin.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Account/_AccountLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxfQWNjb3VudExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Account/_AccountRegister.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Account/_AccountRegister.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxfQWNjb3VudFJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Home/_HomeAdmin.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Home/_HomeAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfSG9tZUFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Home/_HomeIndex.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Home/_HomeIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfSG9tZUluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Home/_HomeLogin.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Home/_HomeLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfSG9tZUxvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Home/_HomePrivacy.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Home/_HomePrivacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfSG9tZVByaXZhY3kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Opportunity/OpportunityAdd.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Opportunity/OpportunityAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3Bwb3J0dW5pdHlcT3Bwb3J0dW5pdHlBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Opportunity/OpportunityList.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Opportunity/OpportunityList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3Bwb3J0dW5pdHlcT3Bwb3J0dW5pdHlMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Shared/Error.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Volunteer/VolunteerAdd.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Volunteer/VolunteerAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50ZWVyXFZvbHVudGVlckFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Volunteer/VolunteerList.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Volunteer/VolunteerList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50ZWVyXFZvbHVudGVlckxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/_ViewImports.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/_ViewStart.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emily/source/repos/mkbarnes1023/PreSemesterAssignment/PreSemesterAssignment/Views/Shared/_Layout.cshtml]
+[C:/source/repos/PreSemesterAssignment/PreSemesterAssignment/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-g0prhjesua
