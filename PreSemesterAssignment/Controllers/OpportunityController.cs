@@ -34,7 +34,7 @@ namespace PreSemesterAssignment.Controllers
         // Returns the page for adding a opportunity
         public IActionResult OpportunityAdd()
         {
-            return View(OpportunityRepo);
+            return View();
         }
 
         // Handler for the submit button 
@@ -47,7 +47,7 @@ namespace PreSemesterAssignment.Controllers
             OpportunityRepo.Save();
 
             // Redirect to the OpportunityList (With the OpportunityRepo)
-            return View("OpportunityList");
+            return View("OpportunityList", OpportunityRepo.Opportunities);
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿@page
-@using PreSemesterAssignment.Models.Repositories;
-@model OpportunityRepository
+﻿@using PreSemesterAssignment.Models.Repositories;
+@model PreSemesterAssignment.Models.Opportunity
 @{
+    //ViewData["Title"] = "OpportunityAdd";
 }
 <!--
     This page serves as a fillable form to register a new Opportunity to the list.
@@ -12,13 +12,13 @@
     <a asp-controller="Home" asp-action="Admin">Back to Admin Home</a>
 
     <!--The form for adding a new Opportunity-->
-    <form>
+    <form asp-controller="Opportunity" asp-action="SubmitNewOpportunity">
         <label>Center</label>
-        <input type="text" id="Center"/>
+        <input asp-for="Center" type="text" id="Center"/>
         <br/>
 
         <label>Description</label>
-        <input type="text" id="LastName"/>
+        <input asp-for="Description" type="text" id="Description"/>
         <br/>
 
         <!--The DateAdded and OpportunityID fields can be automatically filled-->
