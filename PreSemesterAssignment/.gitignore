@@ -1,0 +1,60 @@
+﻿# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code workspace settings
+.vscode/
+
+# ASP.NET Core secrets
+secrets.json
+
+# IIS Express
+*.vs/
+*.vscode/
+*.dbmdl
+
+# Logs
+*.log
+
+# Entity Framework Migrations
+Migrations/
+
+# NuGet packages
+*.nupkg
+packages/
+.nuget/
+
+# Dotnet publish output
+publish/
+out/
+
+# Node modules (if using npm/yarn for frontend)
+node_modules/
+
+# Environment files
+.env
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Rider IDE files
+.idea/
+
+# Mac OS files
+.DS_Store
+
+# Windows image file caches
+*.jfif
+
+# Others
+*.swp
+*.bak
+*.tmp
