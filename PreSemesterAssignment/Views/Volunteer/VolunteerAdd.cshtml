@@ -6,101 +6,109 @@
     This page serves as a fillable form to register a new Volunteer to the list.
     Can also serve as the Edit Volunteer page if fed an existing Volunteer's information.
 -->
-<div>
-    <h1>Volunteer Registration Form</h1>
-    <a asp-controller="Home" asp-action="Admin">Back to Admin Home</a>
-
-    <!--The form for adding a new Volunteer.-->
-    <form asp-controller="Volunteer" asp-action="SubmitNewVolunteer">
-        <label>First Name</label>
-        <input asp-for="FirstName" type="text" id="FirstName" />
-        <br />
-
-        <label>Last Name</label>
-        <input asp-for="LastName" type="text" id="LastName" />
-        <br />
-
-        <label>Username</label>
-        <input asp-for="Username" type=" text" id="Username" />
-        <br />
-
-        <label>Password</label>
-        <input asp-for="Password" type="password" id="Password" />
-        <br />
-
-        <label>PreferedCenters</label>
-        <input asp-for="PreferedCenters" type="text" id="PreferedCenters" />
-        <br />
-
-        <label>SkillsAndInterests</label>
-        <input asp-for="SkillsAndInterests" type="text" id="SkillsAndInterests" />
-        <br />
-
-        <label>AvailableTimes</label>
-        <input asp-for="AvailableTimes" type="text" id="AvailableTimes" />
-        <br />
-
-        <label>CurrentLicenses</label>
-        <input asp-for="CurrentLicenses" type="text" id="CurrentLicenses" />
-        <br />
-
-        <label>Home Address</label>
-        <input asp-for="HomeAddress" type="text" id="HomeAddress" />
-        <br />
-
-        <label>Contact Number</label>
-        <input asp-for="ContactNumbers" type="text" id="ContactNumber" />
-        <br />
-
-        <label>Email Address</label>
-        <input asp-for="EmailAddress" type="text" id="EmailAddress" />
-        <br />
-
-        <label>Education Level</label>
-        <input asp-for="EducationLevel" type="text" id="EducationLevel" />
-        <br />
-
-        <label>Emergency Contact Name</label>
-        <input asp-for="EmergencyContactName" type="text" id="ECName" />
-        <br />
-
-        <label>Emergency Contact Number</label>
-        <input asp-for="EmergencyContactContactNumber" type="text" id="ECNumber" />
-        <br />
-
-        <label>Emergency Contact Home Address</label>
-        <input asp-for="EmergencyContactHomeAddress" type="text" id="ECHomeAddress" />
-        <br />
-
-        <label>Emergency Contact Email Address</label>
-        <input asp-for="EmergencyContactHomeAddress" type="text" id="ECEmailAddress" />
-        <br />
-
-        <label>Drivers Lincense On File?</label>
-        <input asp-for="DriversLicenseOnFile" type="checkbox" id="LicenseOnFile" />
-        <br />
-
-        <label>Social Security Card On File?</label>
-        <input asp-for="SSNCardOnFile" type="checkbox" id="SSNCardOnFile" />
-        <br />
-
-        <label>Approval Status:</label><br/>
-            <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Pending" value="Pending" />
-            <label for="Pending">Pending</label><br />
-
-        <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Approved" value="Approved" />
-            <label for="Pending">Approved</label><br />
-
-        <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Rejected" value="Rejected" />
-            <label for="Pending">Rejected</label><br />
-            <br />
-
-        <!--
-            The VolunteerID field can be automatically filled when the form submits.
-            It might make sense to set the ApprovalState to Pending for every new registered volunteer, but
-            there might be cases where you want to add a volunteer who has already been Approved or Rejected.
-        -->
-
-        <input type="submit" value="Submit" />
-    </form>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h1 class="mb-4 text-center">Volunteer Registration Form</h1>
+                    <a asp-controller="Home" asp-action="Admin" class="btn btn-secondary mb-4">Back to Admin Home</a>
+                    <form asp-controller="Volunteer" asp-action="SubmitNewVolunteer" method="post">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label asp-for="FirstName" class="form-label">First Name</label>
+                                <input asp-for="FirstName" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="LastName" class="form-label">Last Name</label>
+                                <input asp-for="LastName" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Username" class="form-label">Username</label>
+                                <input asp-for="Username" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Password" class="form-label">Password</label>
+                                <input asp-for="Password" type="password" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="PreferedCenters" class="form-label">Prefered Centers</label>
+                                <input asp-for="PreferedCenters" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="SkillsAndInterests" class="form-label">Skills And Interests</label>
+                                <input asp-for="SkillsAndInterests" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="AvailableTimes" class="form-label">Available Times</label>
+                                <input asp-for="AvailableTimes" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="CurrentLicenses" class="form-label">Current Licenses</label>
+                                <input asp-for="CurrentLicenses" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="HomeAddress" class="form-label">Home Address</label>
+                                <input asp-for="HomeAddress" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="ContactNumbers" class="form-label">Contact Number</label>
+                                <input asp-for="ContactNumbers" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="EmailAddress" class="form-label">Email Address</label>
+                                <input asp-for="EmailAddress" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="EducationLevel" class="form-label">Education Level</label>
+                                <input asp-for="EducationLevel" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="EmergencyContactName" class="form-label">Emergency Contact Name</label>
+                                <input asp-for="EmergencyContactName" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="EmergencyContactContactNumber" class="form-label">Emergency Contact Number</label>
+                                <input asp-for="EmergencyContactContactNumber" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="EmergencyContactHomeAddress" class="form-label">Emergency Contact Home Address</label>
+                                <input asp-for="EmergencyContactHomeAddress" type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Emergency Contact Email Address</label>
+                                <input asp-for="EmergencyContactHomeAddress" type="text" class="form-control" id="ECEmailAddress" />
+                            </div>
+                            <div class="col-md-6 form-check mt-4">
+                                <input asp-for="DriversLicenseOnFile" type="checkbox" class="form-check-input" id="LicenseOnFile" />
+                                <label for="LicenseOnFile" class="form-check-label">Drivers License On File?</label>
+                            </div>
+                            <div class="col-md-6 form-check mt-4">
+                                <input asp-for="SSNCardOnFile" type="checkbox" class="form-check-input" id="SSNCardOnFile" />
+                                <label for="SSNCardOnFile" class="form-check-label">Social Security Card On File?</label>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <label class="form-label">Approval Status:</label><br />
+                                <div class="form-check form-check-inline">
+                                    <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Pending" value="Pending" class="form-check-input" />
+                                    <label for="Pending" class="form-check-label">Pending</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Approved" value="Approved" class="form-check-input" />
+                                    <label for="Approved" class="form-check-label">Approved</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input asp-for="ApprovalStatus" type="radio" name="ApprovalStatus" id="Rejected" value="Rejected" class="form-check-input" />
+                                    <label for="Rejected" class="form-check-label">Rejected</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <button type="submit" class="btn btn-primary px-5">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
