@@ -4,34 +4,41 @@
 }
 <!--
     This page provides a list of all the Opportunities registered to the system. The list should support the filtering
-    functions, entry deletion, and a link to the form to add a new Opportunity (OpportunityAdd.cshtml
+    functions, entry deletion, and a link to the form to add a new Opportunity (OpportunityAdd.cshtml)
 -->
-<div>
-    <h1>Opportunity List</h1>
-    <a asp-controller="Home" asp-action="Admin">Back to Admin Home</a>
-    <table>
-        <tr>
-			<th>ID</th>
-            <th>Center</th>
-            <th>Description</th>
-            <th>Date Added</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-            @foreach(Opportunity o in Model)
-            {
-               <tr>
-				    <td>@o.OppurtunityID</td>
-                    <td>@o.Center</td>
-                    <td>@o.Description</td>
-                    <td>@o.DateAdded</td>
-                    <td>
-                        <a asp-controller="Opportunity" asp-action="EditOpportunity" asp-route-OpportunityID="@o.OppurtunityID">Edit</a>
-                    </td>
-                    <td>
-                        <a asp-controller="Opportunity" asp-action="DeleteOpportunity" asp-route-OpportunityID="@o.OppurtunityID">Delete</a>
-                    </td>
-               </tr>
-            }
-    </table>
+<div class="container py-5">
+    <h1 class="mb-4">Opportunity List</h1>
+    <a asp-controller="Home" asp-action="Admin" class="btn btn-secondary mb-3">Back to Admin Home</a>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Center</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var o in Model)
+                {
+                    <tr>
+                        <td>@o.OppurtunityID</td>
+                        <td>@o.Center</td>
+                        <td>@o.Description</td>
+                        <td>@o.DateAdded</td>
+                        <td>
+                            <a asp-controller="Opportunity" asp-action="EditOpportunity" asp-route-OpportunityID="@o.OppurtunityID" class="btn btn-sm btn-primary">Edit</a>
+                        </td>
+                        <td>
+                            <a asp-controller="Opportunity" asp-action="DeleteOpportunity" asp-route-OpportunityID="@o.OppurtunityID" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <a asp-controller="Opportunity" asp-action="OpportunityAdd" class="btn btn-success mt-3">Add New Opportunity</a>
 </div>

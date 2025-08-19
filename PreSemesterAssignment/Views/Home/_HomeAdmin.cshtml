@@ -8,20 +8,29 @@
 -->
 <div>
 	<h1>Volunteer Administration Portal</h1>
-	Welcome to the Volunteer Management System! Please select an option:
-	<ul>
-		<li>
-			<a asp-controller="Volunteer" asp-action="VolunteerList">View Volunteer List</a>
-		</li>
-		<li>
-			<a asp-controller="Volunteer" asp-action="VolunteerAdd">Register New Volunteer</a>
-		</li>
-		<li>
-			<a asp-controller="Opportunity" asp-action="OpportunityList">View Opportunity List</a>
-		</li>
-		<li>
-			<a asp-controller="Opportunity" asp-action="OpportunityAdd">Register New Opportunity</a>
-		</li>
-</ul>
-   
+    Welcome to our volunteer management system! As an administrator, 
+	you have access to manage volunteers and opportunities effectively. 
+	Below are the available functions:
+	<div>
+		<h3>Manage Volunteers</h3>
+		<a asp-controller="Volunteer" asp-action="VolunteerList" class="btn btn-primary btn-lg">View Volunteer List</a>
+		<a asp-controller="Volunteer" asp-action="VolunteerAdd" class="btn btn-primary btn-lg">Register New Volunteer</a>
+	</div>
+
+	<div>
+		<h3> Manage Opportunities</h3>
+		<a asp-controller="Opportunity" asp-action="OpportunityList" class="btn btn-primary btn-lg">View Opportunity List</a>
+		<a asp-controller="Opportunity" asp-action="OpportunityAdd" class="btn btn-primary btn-lg">Register New Opportunity</a>
+	</div>
+
+	<div>
+		<h3>Manage Opportunity Matches</h3>
+		<a asp-controller="VolunteerMatchesModels" asp-action="Index" class="btn btn-primary btn-lg">View Match List</a>
+		<a asp-controller="VolunteerMatchesModels" asp-action="Create" class="btn btn-primary btn-lg">Create New Match</a>
+	</div>
+
+	
+
+	
+		
 </div>
