@@ -25,22 +25,37 @@ namespace PreSemesterAssignment.Controllers
         // Returns the page for viewing the list of volunteers
         public IActionResult VolunteerList()
         {
-            return View(VolunteerRepo);
+            return View(VolunteerRepo.Volunteers);
         }
 
         // Returns the page for adding a volunteer
         public IActionResult VolunteerAdd()
         {
-            return View(VolunteerRepo);
+            return View();
         }
 
 		public IActionResult SubmitNewVolunteer(Volunteer newVolunteer)
 		{
-			// Add the Volunteer to the VolunteerRepo
+            // Add the Volunteer to the VolunteerRepo
+            Console.WriteLine("Adding a new Volunteer" + newVolunteer);
             VolunteerRepo.AddVolunteer(newVolunteer);
             VolunteerRepo.Save();
+
 			// Redirect to the VolunteerList (With the VolunteerRepo)
-			return View("VolunteerList", VolunteerRepo);
+			return View("VolunteerList", VolunteerRepo.Volunteers);
+		}
+
+        public IActionResult VolunteerEdit(int VolunteerID)
+        {
+            return View(VolunteerRepo.GetVolunteerByID(VolunteerID));
+        }
+
+		public IActionResult SubmitEditedVolunteer(Volunteer UpdatedVolunteer)
+		{
+            VolunteerRepo.UpdateVolunteer(UpdatedVolunteer);
+            VolunteerRepo.Save();
+
+			return View("VolunteerList", VolunteerRepo.Volunteers);
 		}
 	}
 }

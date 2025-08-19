@@ -7,22 +7,28 @@
     This page serves as a fillable form to register a new Opportunity to the list.
     Can also serve as the Edit Opportunity page if fed an existing Opportunity's information.
 -->
-<div>
-    <h1>Opportunity Registration Form</h1>
-    <a asp-controller="Home" asp-action="Admin">Back to Admin Home</a>
-
-    <!--The form for adding a new Opportunity-->
-    <form asp-controller="Opportunity" asp-action="SubmitNewOpportunity">
-        <label>Center</label>
-        <input asp-for="Center" type="text" id="Center"/>
-        <br/>
-
-        <label>Description</label>
-        <input asp-for="Description" type="text" id="Description"/>
-        <br/>
-
-        <!--The DateAdded and OpportunityID fields can be automatically filled-->
-
-        <input type="submit" value="Submit"/>
-    </form>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h1 class="mb-4 text-center">Opportunity Registration Form</h1>
+                    <a asp-controller="Home" asp-action="Admin" class="btn btn-secondary mb-4">Back to Admin Home</a>
+                    <form asp-controller="Opportunity" asp-action="SubmitNewOpportunity" method="post">
+                        <div class="mb-3">
+                            <label asp-for="Center" class="form-label">Center</label>
+                            <input asp-for="Center" type="text" id="Center" class="form-control" />
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Description" class="form-label">Description</label>
+                            <input asp-for="Description" type="text" id="Description" class="form-control" />
+                        </div>
+                        <div class="mt-4 text-center">
+                            <button type="submit" class="btn btn-primary px-5">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

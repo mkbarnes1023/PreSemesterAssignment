@@ -1,0 +1,35 @@
+﻿@model PreSemesterAssignment.Models.VolunteerMatchesModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<h4>VolunteerMatchesModel</h4>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h1 class="mb-4 text-center">Create Volunteer Match</h1>
+                    <a asp-controller="Home" asp-action="Admin" class="btn btn-secondary mb-4">Back to Admin Home</a>
+                    <form asp-controller="VolunteerMatchesModels" asp-action="Create" method="post">
+                        <div class="mb-3">
+                            <label asp-for="VolunteerID" class="form-label">Volunteer ID</label>
+                            <input asp-for="VolunteerID" type="text" id="VolunteerID" class="form-control" />
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="OppurtunityID" class="form-label">Opportunity ID</label>
+                            <input asp-for="OppurtunityID" type="text" id="OpportunityID" class="form-control" />
+                        </div>
+                        <div class="mt-4 text-center">
+                            <button type="submit" class="btn btn-primary px-5">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -49,6 +49,31 @@ namespace PreSemesterAssignment.Controllers
             // Redirect to the OpportunityList (With the OpportunityRepo)
             return View("OpportunityList", OpportunityRepo.Opportunities);
         }
-    }
+
+        public IActionResult DeleteOpportunity(int OpportunityID)
+        {
+            Console.WriteLine("ID to be removed: " + OpportunityID);
+            OpportunityRepo.RemoveOpportunityByID(OpportunityID);
+            OpportunityRepo.Save();
+
+            return View("OpportunityList", OpportunityRepo.Opportunities);
+        }
+
+        public IActionResult EditOpportunity(int OpportunityID)
+        {
+            Opportunity o = OpportunityRepo.GetOpportunityByID(OpportunityID);
+
+            return View("OpportunityEdit", o);
+		}
+
+		public IActionResult SubmitEditedOpportunity(Opportunity updatedOpportunity)
+		{
+	        OpportunityRepo.UpdateOpportunity(updatedOpportunity);
+            OpportunityRepo.Save();
+
+			return View("OpportunityList", OpportunityRepo.Opportunities);
+		}
+
+	}
 }
 

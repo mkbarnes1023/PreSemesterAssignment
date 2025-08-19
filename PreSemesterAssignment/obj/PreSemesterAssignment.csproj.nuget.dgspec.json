@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\source\\repos\\PreSemesterAssignment\\PreSemesterAssignment\\PreSemesterAssignment.csproj": {}
+    "C:\\Users\\emily\\source\\repos\\mkbarnes1023\\PreSemesterAssignment\\PreSemesterAssignment\\PreSemesterAssignment.csproj": {}
   },
   "projects": {
-    "C:\\source\\repos\\PreSemesterAssignment\\PreSemesterAssignment\\PreSemesterAssignment.csproj": {
+    "C:\\Users\\emily\\source\\repos\\mkbarnes1023\\PreSemesterAssignment\\PreSemesterAssignment\\PreSemesterAssignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\source\\repos\\PreSemesterAssignment\\PreSemesterAssignment\\PreSemesterAssignment.csproj",
+        "projectUniqueName": "C:\\Users\\emily\\source\\repos\\mkbarnes1023\\PreSemesterAssignment\\PreSemesterAssignment\\PreSemesterAssignment.csproj",
         "projectName": "PreSemesterAssignment",
-        "projectPath": "C:\\source\\repos\\PreSemesterAssignment\\PreSemesterAssignment\\PreSemesterAssignment.csproj",
-        "packagesPath": "C:\\Users\\scarb\\.nuget\\packages\\",
-        "outputPath": "C:\\source\\repos\\PreSemesterAssignment\\PreSemesterAssignment\\obj\\",
+        "projectPath": "C:\\Users\\emily\\source\\repos\\mkbarnes1023\\PreSemesterAssignment\\PreSemesterAssignment\\PreSemesterAssignment.csproj",
+        "packagesPath": "C:\\Users\\emily\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emily\\source\\repos\\mkbarnes1023\\PreSemesterAssignment\\PreSemesterAssignment\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\scarb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emily\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -73,6 +74,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             }
           },
           "imports": [
@@ -94,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300-preview.0.25177.5/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

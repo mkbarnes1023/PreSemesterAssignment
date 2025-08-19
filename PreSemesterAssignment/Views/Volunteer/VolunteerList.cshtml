@@ -1,16 +1,41 @@
-﻿@page
-@model IEnumerable<Volunteer>
+﻿@model IEnumerable<PreSemesterAssignment.Models.Volunteer>
 @{
 }
 <!--
     This page provides a list of all the Volunteers registered to the system. The list should support the filtering
-    functions, entry deletion, and a link to the form to add a new Volunteer (VolunteerAdd.cshtml
+    functions, entry deletion, and a link to the form to add a new Volunteer (VolunteerAdd.cshtml)
 -->
-<div>
-    <h1>Volunteer List</h1>
-    <a asp-controller="Home" asp-action="Admin">Back to Admin Home</a>
-    @foreach(Volunteer v in Model)
-    {
-        
-    }
+<div class="container py-5">
+    <h1 class="mb-4">Volunteer List</h1>
+    <a asp-controller="Home" asp-action="Admin" class="btn btn-secondary mb-3">Back to Admin Home</a>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">Contact Numbers</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var v in Model)
+                {
+                    <tr>
+                        <td>@v.VolunteerID</td>
+                        <td>@v.FirstName</td>
+                        <td>@v.LastName</td>
+                        <td>@v.EmailAddress</td>
+                        <td>@v.ContactNumbers</td>
+                        <td>
+                            <a asp-controller="Volunteer" asp-action="VolunteerEdit" asp-route-VolunteerID="@v.VolunteerID" class="btn btn-sm btn-primary">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <a asp-controller="Volunteer" asp-action="VolunteerAdd" class="btn btn-success mt-3">Add New Volunteer</a>
 </div>
