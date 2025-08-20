@@ -8,6 +8,25 @@
 <div class="container py-5">
     <h1 class="mb-4">Volunteer List</h1>
     <a asp-controller="Home" asp-action="Admin" class="btn btn-secondary mb-3">Back to Admin Home</a>
+    <form asp-controller="Volunteer" asp-action="VolunteerList" method="get">
+        <div class="input-group">
+            <input type="text" name="search" id="search" aria-label="search" class="form-control" placeholder="Search Query">
+            <button type="submit" class="btn btn-outline-secondary" id="search">Search</button>
+
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filters
+                </button>
+                <ul class="dropdown-menu" name="filter" id="filter" aria-labelledby="dropdownMenuButton">
+                    <li><button class="dropdown-item" href="#" id="filter" value="1" aria-label="filter">All</button></li>
+                    <li><button class="dropdown-item" href="#" id="filter" value="2" aria-label="filter">Approved/Pending</button></li>
+                    <li><button class="dropdown-item" href="#" id="filter" value="3" aria-label="filter">Approved</button></li>
+                    <li><button class="dropdown-item" href="#" id="filter" value="4" aria-label="filter">Pending</button></li>
+                    <li><button class="dropdown-item" href="#" id="filter" value="0" aria-label="filter">Disapproved</button></li>
+                </ul>
+            </div>
+        </div>
+    </form>
     <div class="table-responsive">
         <table class="table table-striped table-bordered align-middle">
             <thead class="table-dark">
@@ -17,6 +36,7 @@
                     <th scope="col">Last Name</th>
                     <th scope="col">Email Address</th>
                     <th scope="col">Contact Numbers</th>
+                    <th scope="col">Status</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                 </tr>
@@ -30,6 +50,7 @@
                         <td>@v.LastName</td>
                         <td>@v.EmailAddress</td>
                         <td>@v.ContactNumbers</td>
+                        <td>@v.ApprovalStatus</td>
                         <td>
                             <a asp-controller="Volunteer" asp-action="VolunteerEdit" asp-route-VolunteerID="@v.VolunteerID" class="btn btn-sm btn-primary">Edit</a>
                         </td>
