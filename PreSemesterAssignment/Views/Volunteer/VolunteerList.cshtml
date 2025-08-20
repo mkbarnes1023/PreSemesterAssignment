@@ -13,16 +13,18 @@
             <input type="text" name="search" id="search" aria-label="search" class="form-control" placeholder="Search Query">
             <button type="submit" class="btn btn-outline-secondary" id="search">Search</button>
 
-            @* <div class="dropdown">
+            <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     Filters
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul class="dropdown-menu" name="filter" id="filter" aria-labelledby="dropdownMenuButton">
+                    <li><button class="dropdown-item" href="#" id="filter" value="1" aria-label="filter">All</button></li>
+                    <li><button class="dropdown-item" href="#" id="filter" value="2" aria-label="filter">Approved/Pending</button></li>
+                    <li><button class="dropdown-item" href="#" id="filter" value="3" aria-label="filter">Approved</button></li>
+                    <li><button class="dropdown-item" href="#" id="filter" value="4" aria-label="filter">Pending</button></li>
+                    <li><button class="dropdown-item" href="#" id="filter" value="0" aria-label="filter">Disapproved</button></li>
                 </ul>
-            </div> *@
+            </div>
         </div>
     </form>
     <div class="table-responsive">

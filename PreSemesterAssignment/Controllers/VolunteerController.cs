@@ -23,14 +23,41 @@ namespace PreSemesterAssignment.Controllers
         }
 
         // Returns the page for viewing the list of volunteers
-        public IActionResult VolunteerList(string search)
+        public IActionResult VolunteerList(string search, int filter)
         {
+            // Parses the search query
             var volunteers = VolunteerRepo.Volunteers;
-            Console.WriteLine(search);
             if (!String.IsNullOrEmpty(search))
             {
                 volunteers = volunteers.Where(v => v.FirstName.Contains(search)
                 || v.LastName.Contains(search)).ToList();  
+            }
+
+            // Parses the chosen filter
+            switch (filter)
+            {
+            // Pending/Approved
+            case 1:
+                volunteers = volunteers.Where(v => v.ApprovalStatus.Contains("Approved")
+                || v.ApprovalStatus.Contains("Pending"));
+                break;
+            // Approved
+            case 2:
+                volunteers = volunteers.Where(v => v.ApprovalStatus.Contains("Approved"));
+                break;
+            // Pending
+            case 3:
+                volunteers = volunteers.Where(v => v.ApprovalStatus.Contains("Pending"));
+                break;
+
+            // Denied
+            case 4:
+                volunteers = volunteers.Where(v => v.ApprovalStatus.Contains("Rejected"));
+                break;
+
+            // All/No filter
+            default:
+                break;
             }
 
             return View(volunteers);

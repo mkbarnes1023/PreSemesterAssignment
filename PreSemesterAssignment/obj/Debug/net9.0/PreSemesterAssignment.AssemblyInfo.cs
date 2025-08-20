@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PreSemesterAssignment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d625a1fe4b2a9e66928726006d83d6278183e89")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7659de8889a28f42cb4ac2edce9612b9f7e0fb0")]
 [assembly: System.Reflection.AssemblyProductAttribute("PreSemesterAssignment")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PreSemesterAssignment")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
