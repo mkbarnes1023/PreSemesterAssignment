@@ -34,6 +34,15 @@ namespace PreSemesterAssignment.Controllers
             return View();
         }
 
+		public IActionResult DeleteVolunteer(int VolunteerID)
+		{
+			Console.WriteLine("ID to be removed: " + VolunteerID);
+			VolunteerRepo.RemoveVolunteerByID(VolunteerID);
+			VolunteerRepo.Save();
+
+			return View("VolunteerList", VolunteerRepo.Volunteers);
+		}
+
 		public IActionResult SubmitNewVolunteer(Volunteer newVolunteer)
 		{
             // Add the Volunteer to the VolunteerRepo
